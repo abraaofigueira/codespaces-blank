@@ -1,0 +1,111 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+}
+
+#navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #1a1a1a;
+    padding: 10px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logo {
+    color: magenta;
+    font-size: 24px;
+    margin-left: 20px;
+}
+
+#nav-buttons button {
+    margin: 0 10px;
+    padding: 10px 15px;
+    background-color: magenta;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#nav-buttons button:hover {
+    background-color: #ff00ff;
+}
+
+#app {
+    background-color: #222;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin-top: 80px; /* Espaço para o navbar */
+    width: 80%;
+}
+
+#social-login {
+    margin-bottom: 20px;
+}
+
+.social-button {
+    margin: 5px;
+    padding: 10px 15px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.facebook-button {
+    background-color: #3b5998;
+}
+
+.facebook-button:hover {
+    background-color: #2d4373;
+}
+
+.google-button {
+    background-color: #db4437;
+}
+
+.google-button:hover {
+    background-color: #c23321;
+}
+
+.section {
+    display: none;
+}
+
+input {
+    display: block;
+    margin: 10px 0;
+    padding: 10px;
+    width: calc(100% - 22px);
+    border-radius: 5px;
+    border: 1px solid #444;
+    background-color: #333;
+    color: white;
+}
+
+button {
+    padding: 10px;
+    margin: 10px 0;
+    background-color: magenta;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #ff00ff;
+}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LucySoft - Software de Gestão</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="navbar">
+        <div id="logo">LucySoft</div>
+        <div id="nav-buttons">
+            <button onclick="showSection('criarConta')">Criar Conta</button>
+            <button onclick="showSection('login')">Login</button>
+            <button id="transacaoButton" style="display:none;" onclick="showSection('transacao')">Transação Financeira</button>
+            <button id="entradaProdutoButton" style="display:none;" onclick="showSection('entradaProduto')">Entrada de Produto</button>
+            <button id="saidaProdutoButton" style="display:none;" onclick="showSection('saidaProduto')">Saída de Produto</button>
+            <button id="folhaPagamentoButton" style="display:none;" onclick="showSection('folhaPagamento')">Folha de Pagamento</button>
+            <button onclick="showSection('configuracoes')">Configurações</button>
+        </div>
+    </div>
+    <div id="app">
+        <div id="social-login">
+            <button class="social-button facebook-button">Login com Facebook</button>
+            <button class="social-button google-button">Login com Google</button>
+        </div>
+        <h1>Software de Gestão</h1>
+        
+        <div id="criarConta" class="section">
+            <h2>Criar Conta</h2>
+            <form id="criarContaForm" onsubmit="event.preventDefault(); criarConta();">
+                <input type="text" id="novoNome" placeholder="Nome" required>
+                <input type="email" id="novoEmail" placeholder="Email" required>
+                <input type="password" id="novaSenha" placeholder="Senha" required>
+                <button type="submit">Criar Conta</button>
+            </form>
+        </div>
+        
+        <div id="login" class="section">
+            <h2>Login</h2>
+            <form id="loginForm" onsubmit="event.preventDefault(); login();">
+                <input type="email" id="email" placeholder="Email" required>
+                <input type="password" id="senha" placeholder="Senha" required>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+
+        <div id="transacao" class="section">
+            <h2>Transação Financeira</h2>
+            <input type="number" id="valorTransacao" placeholder="Valor da Transação">
+            <button onclick="registrarTransacao()">Registrar Transação</button>
+            <button onclick="gerarRelatorio()">Gerar Relatório Financeiro</button>
+            <div id="relatorioFinanceiro"></div>
+        </div>
+        
+        <div id="entradaProduto" class="section">
+            <h2>Cadastrar Entrada de Produto</h2>
+            <input type="text" id="nomeProdutoEntrada" placeholder="Nome do Produto">
+            <input type="number" id="quantidadeEntrada" placeholder="Quantidade">
+            <button onclick="cadastrarEntradaProduto()">Cadastrar</button>
+        </div>
+        
+        <div id="saidaProduto" class="section">
+            <h2>Registrar Saída de Produto</h2>
+            <input type="text" id="nomeProdutoSaida" placeholder="Nome do Produto">
+            <input type="number" id="quantidadeSaida" placeholder="Quantidade">
+            <button onclick="registrarSaidaProduto()">Registrar</button>
+        </div>
+        
+        <div id="folhaPagamento" class="section">
+            <h2>Folha de Pagamento</h2>
+            <input type="text" id="nomeFuncionario" placeholder="Nome do Funcionário">
+            <input type="number" id="horasTrabalhadas" placeholder="Horas Trabalhadas">
+            <button onclick="calcularSalario()">Calcular Salário</button>
+            <button onclick="gerarHolerite()">Gerar Holerite</button>
+            <div id="resultadoFolhaPagamento"></div>
+        </div>
+        
+        <div id="configuracoes" class="section">
+            <h2>Configurações</h2>
+            <!-- Configurações do usuário -->
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
+
+
